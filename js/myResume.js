@@ -12,11 +12,11 @@
     var winH = document.documentElement.clientHeight;
     var desW = 707;
     var desH = 1000;
-    //if (winW / winH <= desW / desH) {
-    //    loading.style.webkitTransform = "scale(" + winH / desH + ")";
-    //} else {
-    //    loading.style.webkitTransform = "scale(" + winW / desW + ")";
-    //}
+    if (winW / winH <= desW / desH) {
+        loading.style.webkitTransform = "scale(" + winH / desH + ")";
+    } else {
+        loading.style.webkitTransform = "scale(" + winW / desW + ")";
+    }
 
     var music = getEle("#music");
     var num = 0;
