@@ -217,6 +217,14 @@ html, body {
     width: 350px;
     height: 150px;
     overflow: hidden;
+    transform: scale(.2);
+}
+
+@-webkit-keyframes scale {
+    100% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+    }
 }
 
 .main ul li#second .information span, .main ul li#second .information p {
@@ -330,6 +338,19 @@ html, body {
 
 }
 
+.main ul li#fifth div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background: url("../images/weixin.png") no-repeat;
+    background-size: 100%;
+}
+
 .main .up_bottom {
     position: relative;
     left: 50%;
@@ -398,7 +419,7 @@ html, body {
 
 .main .part span {
     display: block;
-    width: 0%;
+    width: 0;
     height: 100%;
     background: blueviolet;
     transition: 1s;
