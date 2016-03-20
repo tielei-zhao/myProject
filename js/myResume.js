@@ -25,7 +25,7 @@
 
     function isLoad() {
         var progress = getEle(".progress");
-        var ary = ['automusic.png', 'bg.jpg', 'bg1.jpg', 'c1.png','c2.png','c3.png','c4.png','c5.png','c6.png','fire.jpg', 'myself1.jpg', 'page1_bg.png','page2_bg.png','page3_bg.png','page4_bg.jpg','page5_bg.jpg', 'round.png', 'round1.png', 'round2.png'];
+        var ary = ['automusic.png', 'bg.jpg', 'bg1.jpg', 'c1.png', 'c2.png', 'c3.png', 'c4.png', 'c5.png', 'c6.png', 'fire.jpg', 'myself1.jpg', 'page1_bg.png', 'page2_bg.png', 'page3_bg.png', 'page4_bg.jpg', 'page5_bg.jpg', 'round.png', 'round1.png', 'round2.png'];
         window.setTimeout(function () {
             for (var i = 0; i < ary.length; i++) {
                 var oImg = new Image;
@@ -112,8 +112,9 @@
             oLis[this.prevSIndex].addEventListener("webkitTransitionEnd", function () {
                 this.style.webkitTransition = "";
             }, false)
+            var span = document.querySelector(".part>span");
+            span.style.width = this.prevSIndex / 4 * 100 + "%";
         }
     }
-
 
 })();
