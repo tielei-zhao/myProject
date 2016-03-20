@@ -111,7 +111,11 @@
             oLis[this.prevSIndex].style.webkitTransition = "0.7s";
             oLis[this.prevSIndex].addEventListener("webkitTransitionEnd", function () {
                 this.style.webkitTransition = "";
-            }, false)
+            }, false);
+            if (this.prevSIndex === 1) {
+                var info = document.querySelector(".information");
+                info.style.webkitAnimation = "scale 2s linear both";
+            }
             var span = document.querySelector(".part>span");
             span.style.width = this.prevSIndex / 4 * 100 + "%";
         }
